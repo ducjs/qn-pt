@@ -66,9 +66,9 @@ function renderInipodProjects() {
   const track = document.getElementById('inipodTrack');
   if (!track) return;
 
-  track.innerHTML = INIPOD_PROJECTS.map(project => `
+  track.innerHTML = INIPOD_PROJECTS.map((project, idx) => `
     <div class="inipod__project">
-      <div class="project-thumb" data-images='${JSON.stringify(project.images.map(n => "assets/projects/" + n))}'>
+      <div class="project-thumb" data-id="inipod-${idx}" data-images='${JSON.stringify(project.images.map(n => "assets/projects/" + n))}'>
         <img src="${project.image}" alt="${project.title}" class="inipod__project-image" />
         <div class="project-thumb__overlay">
           <span class="project-thumb__label">Click to see more</span>
@@ -144,9 +144,9 @@ function renderForixProjects() {
   const track = document.getElementById('forixTrack');
   if (!track) return;
 
-  track.innerHTML = FORIX_PROJECTS.map(project => `
+  track.innerHTML = FORIX_PROJECTS.map((project, idx) => `
     <div class="forix__project">
-      <div class="project-thumb" data-images='${JSON.stringify(project.images.map(n => "assets/projects/" + n))}'>
+      <div class="project-thumb" data-id="forix-${idx}" data-images='${JSON.stringify(project.images.map(n => "assets/projects/" + n))}'>
         <img src="${project.image}" alt="${project.title}" class="forix__project-image" />
         <div class="project-thumb__overlay">
           <span class="project-thumb__label">Click to see more</span>
@@ -168,6 +168,31 @@ function renderForixProjects() {
 }
 
 renderForixProjects();
+
+// ─── Project Thumbnail Auto-Slide ───
+function initProjectAutoSlide() {
+  const projectThumbs = document.querySelectorAll('.project-thumb');
+
+  projectThumbs.forEach(thumb => {
+    try {
+      const images = JSON.parse(thumb.dataset.images);
+      if (images.length <= 1) return;
+
+      let currentIndex = 0;
+      const imgElement = thumb.querySelector('img');
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.src = images[currentIndex];
+      }, 3000);
+    } catch (err) {
+      console.error('Error initializing auto-slide:', err);
+    }
+  });
+}
+
+// Initialize auto-slide after projects are rendered
+setTimeout(initProjectAutoSlide, 100);
 
 // ─── ABOUT Highlights ───
 const ABOUT_HIGHLIGHTS = [
@@ -205,45 +230,27 @@ function renderAboutHighlights() {
 }
 
 
-// ─── Carousel Grab/Drag ───
-function initCarouselDrag(carouselSelector) {
+// ─── Carousel Navigation Buttons ───
+function initCarouselButtons(carouselSelector, prevBtnId, nextBtnId) {
   const carousel = document.querySelector(carouselSelector);
-  if (!carousel) return;
+  const prevBtn = document.getElementById(prevBtnId);
+  const nextBtn = document.getElementById(nextBtnId);
 
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  if (!carousel || !prevBtn || !nextBtn) return;
 
-  carousel.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-    carousel.style.cursor = 'grabbing';
+  const scrollAmount = 560 + 32; // card width + gap
+
+  prevBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
   });
 
-  carousel.addEventListener('mouseleave', () => {
-    isDown = false;
-    carousel.style.cursor = 'grab';
+  nextBtn.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   });
-
-  carousel.addEventListener('mouseup', () => {
-    isDown = false;
-    carousel.style.cursor = 'grab';
-  });
-
-  carousel.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    carousel.scrollLeft = scrollLeft - walk;
-  });
-
-  carousel.style.cursor = 'grab';
 }
 
-initCarouselDrag('.inipod__carousel');
-initCarouselDrag('.forix__carousel');
+initCarouselButtons('.inipod__carousel', 'inipodPrev', 'inipodNext');
+initCarouselButtons('.forix__carousel', 'forixPrev', 'forixNext');
 
 // ─── Lightbox Image Gallery ───
 let currentLightboxImages = [];

@@ -493,12 +493,51 @@ body {
   margin-left: 8px;
 }
 
+/* ─── Carousel Navigation Buttons ─── */
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 -48px;
+  padding: 0 48px;
+}
+
+.carousel-btn {
+  background: var(--white);
+  border: 1px solid #e8eaed;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--navy);
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+.carousel-btn--prev {
+  order: -1;
+}
+
 .inipod__carousel {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  margin: 0 -48px;
-  padding: 0 48px;
+  flex: 1;
 }
 
 .inipod__carousel::-webkit-scrollbar {
@@ -661,8 +700,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  margin: 0 -48px;
-  padding: 0 48px;
+  flex: 1;
 }
 
 .forix__carousel::-webkit-scrollbar {
@@ -1074,6 +1112,16 @@ body {
   }
 
   .cap-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .carousel-container {
+    gap: 12px;
+  }
 
   .inipod {
     padding: 60px 24px;

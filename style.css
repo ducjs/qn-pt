@@ -19,7 +19,7 @@ body {
   font-family: var(--font-sans);
   color: var(--text);
   background: var(--white);
-  font-size: 17px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -41,7 +41,7 @@ body {
   padding: 0 48px;
   height: 64px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
 .nav__logo {
@@ -159,7 +159,7 @@ body {
 .intro__bio p {
   color: var(--text);
   margin-bottom: 16px;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.65;
   max-width: 480px;
 }
@@ -786,51 +786,141 @@ body {
   margin-bottom: 48px;
 }
 
-.about__grid {
+.about__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
   margin-bottom: 60px;
+  background: #f4f4f4;
+  padding-left: 5px;
 }
 
-.about__card {
-  background: var(--white);
-  border: 1px solid #e8eaed;
+.about__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__column--blue {
+  background: linear-gradient(340deg, #50819b 0%, #34afe9 100%);
+  padding: 25px;
+  padding-bottom: 5px;
   border-radius: 8px;
-  overflow: hidden;
+  color: var(--white);
+  box-shadow: 0 8px 24px rgba(13, 140, 200, 0.25);
 }
 
-.about__card-image {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-}
-
-.about__card-content {
-  padding: 24px;
-}
-
-.about__card-title {
+.about__column-title {
   font-size: 18px;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 8px;
+  margin-bottom: 16px;
+  margin-top: 0;
 }
 
-.about__card-meta {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--blue);
-  text-transform: uppercase;
+.about__column-title--white {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about__column-title--spaced {
+  margin-top: 32px;
+}
+
+.about__icon {
+  font-size: 20px;
+}
+
+.about__list {
+  list-style: none;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.about__list li {
+  color: var(--text);
   margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
 }
 
-.about__card-desc {
-  font-size: 14px;
+.about__list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--text);
+}
+
+.about__achievement-list {
+  list-style: none;
+  margin: 0 0 24px 0;
+  padding: 0;
+}
+
+.about__achievement-list li {
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.about__achievement-list strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.about__achievement-list em {
   color: var(--muted);
+  font-style: italic;
+  display: block;
+  margin-top: 4px;
+}
+
+.about__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about__badge {
+  background: #eaeaea;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.about__experience,
+.about__objective {
+  margin-bottom: 32px;
+}
+
+.about__experience-list,
+.about__objective-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about__experience-list li,
+.about__objective-list li {
+  color: var(--white);
+  /* margin-bottom: 5px; */
   line-height: 1.7;
+  padding-left: 0;
+}
+
+.about__experience-list li::before,
+.about__objective-list li::before {
+  content: '•';
+  margin-right: 8px;
+}
+
+.about__experience-list strong,
+.about__objective-list strong {
+  color: var(--white);
+  font-weight: 700;
 }
 
 .about__divider {
@@ -947,8 +1037,13 @@ body {
     padding: 60px 24px;
   }
 
-  .about__grid {
+  .about__content {
     grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about__column--blue {
+    padding: 24px;
   }
 
   .footer__wrapper {

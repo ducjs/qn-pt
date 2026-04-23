@@ -175,7 +175,6 @@ function renderAboutHighlights() {
   `).join('');
 }
 
-renderAboutHighlights();
 
 // ─── Carousel Grab/Drag ───
 function initCarouselDrag(carouselSelector) {

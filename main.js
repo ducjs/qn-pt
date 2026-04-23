@@ -19,7 +19,8 @@ const INIPOD_PROJECTS = [
   {
     id: 'gauvendi',
     title: 'Gauvendi 2.0',
-    image: 'assets/photo-1.jpg',
+    image: 'assets/projects/Gauvendi.jpg',
+    images: ['Gauvendi.jpg', 'gauvendi2.png', 'gauvendi3.png', 'gauvendi4.png', 'gauvendi5.png', 'gauvendi6.png', 'gauvendi7.jpg', 'gauvendi8.png', 'gauvendi9.png'],
     meta: 'BOOKING ENGINE - GAUVENDI - GERMANY',
     description: 'A full-featured hospitality booking engine serving 50+ hotel properties. When the original Java-based platform became unmaintainable, Inipod rebuilt the system on NestJS. I joined at the rebuild phase — taking ownership of the redesign project, managing new requirements, resolving functional gaps, and ultimately leading the migration of all properties to the new platform.',
     highlights: [
@@ -33,7 +34,8 @@ const INIPOD_PROJECTS = [
   {
     id: 'dayaway',
     title: 'DayAway',
-    image: 'assets/photo-1.jpg',
+    image: 'assets/projects/Dayaway.jpg',
+    images: ['Dayaway.jpg', 'Dayaway 2.png', 'Dayaway 3.png', 'Dayaway 4.jpg', 'Dayaway 5.jpg', 'Dayaway 6.png', 'Dayaway 7.png', 'Dayaway 8.png'],
     meta: 'EXPERIENCE PLATFORM - MYDAYAWAY - SINGAPORE',
     description: 'An experience reservation platform allowing hotel guests to book curated day experiences, activities, and amenities — integrated across IHG\'s global portfolio. Managed feature delivery and operational coordination for ongoing enhancements.',
     highlights: [
@@ -44,17 +46,18 @@ const INIPOD_PROJECTS = [
     tags: ['EXPERIENCE PLATFORM', 'MAINTENANCE OPS', 'FUNCTION OWNER']
   },
   {
-    id: 'dayaway',
-    title: 'DayAway',
-    image: 'assets/photo-1.jpg',
-    meta: 'EXPERIENCE PLATFORM - MYDAYAWAY - SINGAPORE',
-    description: 'An experience reservation platform allowing hotel guests to book curated day experiences, activities, and amenities — integrated across IHG\'s global portfolio. Managed feature delivery and operational coordination for ongoing enhancements.',
+    id: 'ipbp',
+    title: 'IPBP',
+    image: 'assets/projects/IPBP.jpg',
+    images: ['IPBP.jpg', 'ipbp2.png', 'ipbp3.png', 'ipbp4.jpg', 'ipbp5.png', 'ipbp6.png', 'ipbp7.png'],
+    meta: 'HOSPITALITY MANAGEMENT - SINGAPORE',
+    description: 'A hospitality management platform managing operations and guest experiences.',
     highlights: [
-      'Coordinated feature releases and QA validation for experience booking flows',
-      'Managed client-side requirements gathering and cross-team delivery tracking',
-      'Supported integration workflows between experience booking and hotel PMS systems'
+      'Managed platform operations and feature enhancements',
+      'Coordinated stakeholder communications and requirement gathering',
+      'Supported system integration and data workflows'
     ],
-    tags: ['EXPERIENCE PLATFORM', 'MAINTENANCE OPS', 'FUNCTION OWNER']
+    tags: ['HOSPITALITY', 'PLATFORM OPS', 'MANAGEMENT']
   }
 ];
 
@@ -65,7 +68,12 @@ function renderInipodProjects() {
 
   track.innerHTML = INIPOD_PROJECTS.map(project => `
     <div class="inipod__project">
-      <img src="${project.image}" alt="${project.title}" class="inipod__project-image" />
+      <div class="project-thumb" data-images='${JSON.stringify(project.images.map(n => "assets/projects/" + n))}'>
+        <img src="${project.image}" alt="${project.title}" class="inipod__project-image" />
+        <div class="project-thumb__overlay">
+          <span class="project-thumb__label">Click to see more</span>
+        </div>
+      </div>
       <div class="inipod__project-content">
         <h3 class="inipod__project-title">${project.title}</h3>
         <p class="inipod__project-meta">${project.meta}</p>
@@ -88,7 +96,8 @@ const FORIX_PROJECTS = [
   {
     id: 'sigma',
     title: 'SIGMA',
-    image: 'assets/photo-1.jpg',
+    image: 'assets/projects/SIGMA.jpg',
+    images: ['SIGMA.jpg', 'sigma2.png', 'sigma3.png', 'sigma4.png', 'sigma5.jpg', 'sigma6.jpg', 'sigma7.png'],
     meta: 'PHOTOGRAPHY EQUIPMENT - UNITED STATES',
     description: 'A high-traffic eCommerce platform built on Magento, requiring continuous maintenance, content management, and performance optimization. I supported daily operations, ensuring platform stability while managing content workflows and marketing updates.',
     highlights: [
@@ -102,7 +111,8 @@ const FORIX_PROJECTS = [
   {
     id: 'christmas-designers',
     title: 'Christmas Designers',
-    image: 'assets/photo-1.jpg',
+    image: 'assets/projects/Christmas Designers.jpg',
+    images: ['Christmas Designers.jpg', 'christmas designers 3.jpg', 'christmas designers 4.jpg', 'christmas designers 5.jpg', 'christmas designers 6.jpg', 'christmas designers 7.png'],
     meta: 'HOLIDAY DECORATIONS - UNITED STATES',
     description: 'A seasonal eCommerce brand requiring a full-scale website redesign to improve user experience and conversion performance. I coordinated the end-to-end redesign across all key user journeys.',
     highlights: [
@@ -112,6 +122,20 @@ const FORIX_PROJECTS = [
       'Managed rollout and validation to ensure a smooth transition without disrupting peak-season operations'
     ],
     tags: ['ECOMMERCE UX', 'WEBSITE REDESIGN', 'MAGENTO']
+  },
+  {
+    id: 'handshake',
+    title: 'Handshake',
+    image: 'assets/projects/Handshake.jpg',
+    images: ['Handshake.jpg', 'handshake2.png', 'handshake3.png', 'handshake4.png', 'handshake5.png', 'handshake6.jpg', 'handshake7.jpg'],
+    meta: 'RECRUITMENT PLATFORM - UNITED STATES',
+    description: 'A recruitment and career network platform supporting student employment and professional connections.',
+    highlights: [
+      'Managed platform feature development and user experience improvements',
+      'Coordinated integration with educational institutions and employers',
+      'Supported community engagement and content management initiatives'
+    ],
+    tags: ['RECRUITMENT', 'PLATFORM DEVELOPMENT', 'USER EXPERIENCE']
   }
 ];
 
@@ -122,7 +146,12 @@ function renderForixProjects() {
 
   track.innerHTML = FORIX_PROJECTS.map(project => `
     <div class="forix__project">
-      <img src="${project.image}" alt="${project.title}" class="forix__project-image" />
+      <div class="project-thumb" data-images='${JSON.stringify(project.images.map(n => "assets/projects/" + n))}'>
+        <img src="${project.image}" alt="${project.title}" class="forix__project-image" />
+        <div class="project-thumb__overlay">
+          <span class="project-thumb__label">Click to see more</span>
+        </div>
+      </div>
       <div class="forix__project-content">
         <h3 class="forix__project-title">${project.title}</h3>
         <p class="forix__project-meta">${project.meta}</p>
@@ -215,3 +244,95 @@ function initCarouselDrag(carouselSelector) {
 
 initCarouselDrag('.inipod__carousel');
 initCarouselDrag('.forix__carousel');
+
+// ─── Lightbox Image Gallery ───
+let currentLightboxImages = [];
+let currentLightboxIndex = 0;
+
+function openLightbox(images) {
+  if (!Array.isArray(images) || images.length === 0) return;
+
+  currentLightboxImages = images;
+  currentLightboxIndex = 0;
+
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+
+  renderLightboxSlide(0);
+  renderLightboxDots();
+}
+
+function closeLightbox() {
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  currentLightboxImages = [];
+  currentLightboxIndex = 0;
+}
+
+function renderLightboxSlide(index) {
+  if (index < 0) index = currentLightboxImages.length - 1;
+  if (index >= currentLightboxImages.length) index = 0;
+
+  currentLightboxIndex = index;
+
+  const stage = document.getElementById('lightboxStage');
+  stage.innerHTML = `<img src="${currentLightboxImages[index]}" alt="Gallery image ${index + 1}" />`;
+
+  updateLightboxDots();
+}
+
+function renderLightboxDots() {
+  const dotsContainer = document.getElementById('lightboxDots');
+  dotsContainer.innerHTML = currentLightboxImages
+    .map((_, i) => `<button class="lightbox__dot ${i === 0 ? 'is-active' : ''}" data-index="${i}" aria-label="Go to image ${i + 1}"></button>`)
+    .join('');
+
+  dotsContainer.querySelectorAll('.lightbox__dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = parseInt(dot.dataset.index);
+      renderLightboxSlide(index);
+    });
+  });
+}
+
+function updateLightboxDots() {
+  document.querySelectorAll('.lightbox__dot').forEach((dot, i) => {
+    dot.classList.toggle('is-active', i === currentLightboxIndex);
+  });
+}
+
+document.addEventListener('click', e => {
+  const thumb = e.target.closest('.project-thumb');
+  if (thumb) {
+    try {
+      const images = JSON.parse(thumb.dataset.images);
+      openLightbox(images);
+    } catch (err) {
+      console.error('Error parsing image data:', err);
+    }
+  }
+
+  // Close lightbox when clicking outside the image
+  const lightbox = document.getElementById('lightbox');
+  if (e.target.id === 'lightbox' && lightbox.classList.contains('is-open')) {
+    closeLightbox();
+  }
+});
+
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxPrev').addEventListener('click', () => {
+  renderLightboxSlide(currentLightboxIndex - 1);
+});
+document.getElementById('lightboxNext').addEventListener('click', () => {
+  renderLightboxSlide(currentLightboxIndex + 1);
+});
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').classList.contains('is-open')) {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') renderLightboxSlide(currentLightboxIndex - 1);
+    if (e.key === 'ArrowRight') renderLightboxSlide(currentLightboxIndex + 1);
+  }
+});

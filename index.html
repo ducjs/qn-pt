@@ -17,6 +17,7 @@
         <li><a href="#expertise" class="nav__link">EXPERTISE</a></li>
         <li><a href="#inipod" class="nav__link">INIPOD</a></li>
         <li><a href="#forix" class="nav__link">FORIX</a></li>
+        <li><a href="#about" class="nav__link">ABOUT</a></li>
       </ul>
       <a href="#connect" class="btn btn--nav">CONNECT</a>
     </div>
@@ -327,20 +328,48 @@
     </div>
   </section>
 
+  <!-- CONNECT SECTION -->
+  <section class="connect" id="connect">
+    <div class="connect__wrapper">
+      <h2 class="connect__title">Connect</h2>
+      <div class="connect__grid">
+        <div class="connect__item">
+          <h3 class="connect__label">LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/ngoc-nguyen-3193082202/" class="connect__link">Ngoc Nguyen</a>
+        </div>
+        <div class="connect__item">
+          <h3 class="connect__label">Email Address</h3>
+          <a href="mailto:bosamca318@gmail.com" class="connect__link">bosamca318@gmail.com</a>
+        </div>
+        <div class="connect__item">
+          <h3 class="connect__label">Phone</h3>
+          <p class="connect__text">+84 798 514 059</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__left">
         <p class="footer__logo">NGOC NGUYEN (SAM)</p>
-        <p class="footer__copyright">© 2024 NGOC NGUYEN. ALL RIGHTS RESERVED.</p>
       </div>
       <div class="footer__right">
-        <a href="#" class="footer__link">LINKEDIN</a>
-        <a href="#" class="footer__link">GITHUB</a>
-        <a href="#" class="footer__link">EMAIL</a>
+        <a href="https://www.linkedin.com/in/ngoc-nguyen-3193082202/" class="footer__link">LINKEDIN</a>
+        <a href="#" class="footer__link">CV</a>
       </div>
     </div>
   </footer>
+
+  <!-- LIGHTBOX / IMAGE CAROUSEL MODAL -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close lightbox">×</button>
+    <button class="lightbox__prev" id="lightboxPrev" aria-label="Previous image">&#8592;</button>
+    <button class="lightbox__next" id="lightboxNext" aria-label="Next image">&#8594;</button>
+    <div class="lightbox__stage" id="lightboxStage"></div>
+    <div class="lightbox__dots" id="lightboxDots"></div>
+  </div>
 
   <script src="main.js"></script>
 </body>

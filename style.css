@@ -930,6 +930,66 @@ body {
   margin-top: 40px;
 }
 
+/* ─── CONNECT SECTION ─── */
+.connect {
+  display: flex;
+  justify-content: center;
+  padding: 80px 48px;
+  background: var(--white);
+}
+
+.connect__wrapper {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.connect__title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+  margin-bottom: 48px;
+}
+
+.connect__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 64px;
+}
+
+.connect__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.connect__label {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.connect__link {
+  font-size: 16px;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+  line-height: 1.6;
+}
+
+.connect__link:hover {
+  color: var(--blue);
+}
+
+.connect__text {
+  font-size: 16px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* ─── FOOTER ─── */
 .footer {
   background: #f5f5f5;
@@ -955,7 +1015,7 @@ body {
   letter-spacing: 0.08em;
   color: var(--navy);
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin: 0;
 }
 
 .footer__copyright {
@@ -1046,6 +1106,15 @@ body {
     padding: 24px;
   }
 
+  .connect {
+    padding: 60px 24px;
+  }
+
+  .connect__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
   .footer__wrapper {
     flex-direction: column;
     gap: 24px;
@@ -1056,4 +1125,149 @@ body {
     width: 100%;
     justify-content: center;
   }
+
+  .lightbox__stage { max-height: 60vh; }
+}
+
+/* ─── Project Hover Overlay ─── */
+.project-thumb {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.project-thumb__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease;
+  z-index: 10;
+}
+
+.project-thumb:hover .project-thumb__overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.project-thumb__label {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.project-thumb:hover .project-thumb__label {
+  opacity: 1;
+}
+
+/* ─── Lightbox / Image Carousel Modal ─── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.95);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.is-open {
+  display: flex;
+}
+
+.lightbox__stage {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 85vh;
+  max-width: 90vw;
+}
+
+.lightbox__stage img {
+  max-height: 85vh;
+  max-width: 90vw;
+  object-fit: contain;
+  display: block;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 36px;
+  cursor: pointer;
+  z-index: 2001;
+  transition: color 0.2s;
+  padding: 8px 12px;
+  line-height: 1;
+}
+
+.lightbox__close:hover {
+  color: var(--blue);
+}
+
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--white);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 16px 12px;
+  z-index: 2001;
+  transition: background 0.2s;
+}
+
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox__prev {
+  left: 20px;
+}
+
+.lightbox__next {
+  right: 20px;
+}
+
+.lightbox__dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 2001;
+}
+
+.lightbox__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  padding: 0;
+}
+
+.lightbox__dot.is-active {
+  background: var(--white);
+}
+
+.lightbox__dot:hover {
+  background: rgba(255, 255, 255, 0.8);
 }

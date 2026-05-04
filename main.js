@@ -31,42 +31,122 @@ const INIPOD_PROJECTS = [
     image: 'assets/projects/Gauvendi.jpg',
     images: ['Gauvendi.jpg', 'gauvendi2.png', 'gauvendi3.png', 'gauvendi4.png', 'gauvendi5.png', 'gauvendi6.png', 'gauvendi7.jpg', 'gauvendi8.png', 'gauvendi9.png'],
     meta: 'BOOKING ENGINE - GAUVENDI - GERMANY',
-    description: 'A full-featured hospitality booking engine serving 50+ hotel properties. When the original Java-based platform became unmaintainable, Inipod rebuilt the system on NestJS. I joined at the rebuild phase — taking ownership of the redesign project, managing new requirements, resolving functional gaps, and ultimately leading the migration of all properties to the new platform.',
+    description: 'A full-featured hospitality booking platform serving 75+ hotel properties across Europe and North America. The system was rebuilt from a legacy Java-based platform to a modern NestJS architecture to improve scalability, maintainability, and support evolving business requirements.',
     highlights: [
-      'Took ownership of the NestJS rebuild mid-stream — coordinating requirement re-analysis and gap resolution between 1.0 and 2.0',
-      'Managed new feature requirements and logic changes on top of the rebuilt system',
-      'Led end-to-end migration of 50+ hotels from legacy Java platform to Gauvendi 2.0',
-      'Coordinated data mapping, stakeholder validation, and go-live sequencing across all properties'
+      'Implemented the new 2.0 platform using NestJS, redesigning core booking logic including room availability, inventory, and reservation flows',
+      'Analyzed requirements and translated them into technical tasks for developers, ensuring alignment between business needs and system behavior',
+      'Managed ongoing enhancements and resolved functional gaps and bugs throughout the rebuild phase',
+      'Led partial migration from legacy 1.0 to 2.0, successfully onboarding 20+ hotel properties',
+      'Coordinated data mapping, validation, and rollout while continuing to address outstanding items in the migration roadmap'
     ],
-    tags: ['NESTJS', 'REQUIREMENT MANAGEMENT', 'PLATFORM MIGRATION']
-  },
-  {
-    id: 'dayaway',
-    title: 'DayAway',
-    image: 'assets/projects/Dayaway.jpg',
-    images: ['Dayaway.jpg', 'Dayaway 2.png', 'Dayaway 3.png', 'Dayaway 4.jpg', 'Dayaway 5.jpg', 'Dayaway 6.png', 'Dayaway 7.png', 'Dayaway 8.png'],
-    meta: 'EXPERIENCE PLATFORM - MYDAYAWAY - SINGAPORE',
-    description: 'An experience reservation platform allowing hotel guests to book curated day experiences, activities, and amenities — integrated across IHG\'s global portfolio. Managed feature delivery and operational coordination for ongoing enhancements.',
-    highlights: [
-      'Coordinated feature releases and QA validation for experience booking flows',
-      'Managed client-side requirements gathering and cross-team delivery tracking',
-      'Supported integration workflows between experience booking and hotel PMS systems'
-    ],
-    tags: ['EXPERIENCE PLATFORM', 'MAINTENANCE OPS', 'FUNCTION OWNER']
+    tags: ['BOOKING ENGINE', 'PLATFORM MIGRATION', 'REQUIREMENT MANAGEMENT']
   },
   {
     id: 'ipbp',
     title: 'IPBP',
     image: 'assets/projects/IPBP.jpg',
     images: ['IPBP.jpg', 'ipbp2.png', 'ipbp3.png', 'ipbp4.jpg', 'ipbp5.png', 'ipbp6.png', 'ipbp7.png'],
-    meta: 'HOSPITALITY MANAGEMENT - SINGAPORE',
-    description: 'A hospitality management platform managing operations and guest experiences.',
+    meta: 'FINANCIAL REPORTING - AWC GROUP - THAILAND',
+    description: 'An enterprise financial and operational reporting platform developed for AWC, one of Thailand\'s largest hospitality conglomerates with 20+ hotels. The system centralizes and manages key hotel performance data including revenue forecasts, booking volume, budgeting, and financial analysis.',
     highlights: [
-      'Managed platform operations and feature enhancements',
-      'Coordinated stakeholder communications and requirement gathering',
-      'Supported system integration and data workflows'
+      'Maintained and supported a live Phase 1 system, ensuring stability and data accuracy',
+      'Analyzed new business requirements and translated complex financial logic into development tasks',
+      'Implemented enhancements and fixed bugs based on stakeholder requests',
+      'Reviewed outstanding items from Phase 1, prioritized backlog, and coordinated resource allocation for completion',
+      'Contributed to preparation for Phase 2 scope, planning, and delivery'
     ],
-    tags: ['HOSPITALITY', 'PLATFORM OPS', 'MANAGEMENT']
+    tags: ['FINANCIAL REPORTS', 'FORECASTING', 'STAKEHOLDER MANAGEMENT']
+  },
+  {
+    id: 'dayaway',
+    title: 'DayAway',
+    image: 'assets/projects/Dayaway.jpg',
+    images: ['Dayaway.jpg', 'Dayaway 2.png', 'Dayaway 3.png', 'Dayaway 4.jpg', 'Dayaway 5.jpg', 'Dayaway 6.png', 'Dayaway 7.png', 'Dayaway 8.png'],
+    meta: 'EXPERIENCE BOOKING PLATFORM - MYDAYAWAY - SINGAPORE',
+    description: 'An experience reservation platform enabling hotel guests to book curated services such as spa treatments, activities, and festival tickets. The platform supports end-to-end booking flows, including payment, QR-based check-in, and customer communication.',
+    highlights: [
+      'Implemented festival ticketing features, including booking flow and QR code check-in',
+      'Built and managed automated customer email notifications',
+      'Maintained and enhanced the platform based on evolving business requirements',
+      'Gathered and translated client requirements into functional features',
+      'Supported ongoing operations and handled bug fixing across the system'
+    ],
+    tags: ['REQUIREMENT ANALYSIS', 'FEATURE IMPLEMENTATION', 'PLATFORM MAINTENANCE']
+  },
+  {
+    id: 'hungryin',
+    title: 'HungryIn',
+    image: 'assets/projects/HungryIn.png',
+    images: ['HungryIn.png', 'Hungryin 2.jpg', 'Hungryin 3.jpg'],
+    meta: 'F&B MANAGEMENT - THE ASIA COLLECTIVE - INTERNATIONAL',
+    description: 'A restaurant and F&B voucher management platform enabling users to purchase and redeem dining experiences across multiple regions. The system supports voucher distribution, restaurant operations, and integration with mobile platforms.',
+    highlights: [
+      'Maintained and supported the platform through ongoing bug fixing and operational tickets',
+      'Analyzed new requirements, collaborated with developers, and proposed solutions to clients',
+      'Implemented key features including app version check for forced updates and subscription-based access control',
+      'Expanded platform coverage by onboarding new venues in Dubai and Bangkok',
+      'Handled additional enhancement requests and ensured smooth system operation'
+    ],
+    tags: ['REQUIREMENT ANALYSIS', 'FEATURE ENHANCEMENT', 'MOBILE INTEGRATION']
+  },
+  {
+    id: 'rebean',
+    title: 'Rebean',
+    image: 'assets/projects/Rebean.png',
+    images: ['Rebean.png', 'rebean 2.png', 'rebean 3.png', 'rebean4.jpg', 'rebean 5.png', 'rebean 6.png', 'rebean 7.png', 'rebean 8.png'],
+    meta: 'AI VISIBILITY - INIPOD - VIETNAM',
+    description: 'Inipod\'s proprietary SaaS product — an AI-powered visibility tracking and SEO intelligence platform designed for hotels, brands, and hospitality businesses. Rebean analyzes AI search presence, SEO performance, AEO and GEO metrics.',
+    highlights: [
+      'Contributed to competitive research and market analysis during product ideation phase',
+      'Provided UX feedback and feature suggestions based on target user needs in the hospitality vertical',
+      'Coordinated development team in building core product functions and AI tracking features',
+      'Produced structured product reports and documentation to support go-to-market planning'
+    ],
+    tags: ['AI VISIBILITY', 'SEO/AEO/GEO', 'SAAS PRODUCT']
+  },
+  {
+    id: 'pobs',
+    title: 'POBS',
+    image: 'assets/projects/POBS.png',
+    images: ['POBS.png', 'pobs2.png', 'pobs3.png', 'pobs4.png', 'pobs5.png', 'pobs6.png'],
+    meta: 'CONSTRUCTION & OPERATIONS - IHG - INTERNATIONAL',
+    description: 'An enterprise platform supporting workforce planning across the full hotel development lifecycle — from pre-construction planning to operational readiness, including headcount planning, salary structuring, and staffing management.',
+    highlights: [
+      'Managed requirement intake and sprint coordination, aligning workforce planning workflows with IHG\'s operational standards',
+      'Logged and tracked scope-related tasks, ensuring visibility and prioritization across planning and execution phases',
+      'Coordinated with cross-functional teams to define and refine workforce structures across different project stages',
+      'Supported delivery alignment between planning data and real operational needs as hotels transitioned into live operations'
+    ],
+    tags: ['WORKFORCE PLANNING', 'XFN COORDINATION', 'REQUIREMENT OWNERSHIP']
+  },
+  {
+    id: 'handshake',
+    title: 'Handshake',
+    image: 'assets/projects/Handshake.jpg',
+    images: ['Handshake.jpg', 'handshake2.png', 'handshake3.png', 'handshake4.png', 'handshake5.png', 'handshake6.jpg', 'handshake7.jpg'],
+    meta: 'BUDGET MANAGEMENT - SINGAPORE',
+    description: 'A budget management platform designed to track and manage financial planning across construction projects, with structured budgeting by phases and milestones.',
+    highlights: [
+      'Coordinated requirement gathering and task execution for budget planning and tracking features',
+      'Managed milestone-based budgeting workflows, ensuring accurate allocation and tracking across project phases',
+      'Collaborated with stakeholders to align financial logic with construction timelines and delivery goals',
+      'Tracked progress and resolved issues to ensure smooth delivery of budgeting and reporting functionalities'
+    ],
+    tags: ['BUDGET MANAGEMENT', 'MILESTONE TRACKING', 'XFN ALIGNMENT']
+  },
+  {
+    id: 'ihotel',
+    title: 'iHotel',
+    image: 'assets/projects/iHotel.jpg',
+    images: ['iHotel.jpg', 'ihotel1.png', 'ihotel2.png', 'ihotel3.png'],
+    meta: 'HOTEL OPERATIONS - WINK HOTELS - VIETNAM',
+    description: 'A hotel operations management platform designed for Wink Hotels, supporting daily operational workflows such as housekeeping, maintenance scheduling, room service, incident reporting, and concierge services.',
+    highlights: [
+      'Maintained the live platform by handling bug fixes and operational issues',
+      'Coordinated with developers to resolve reported issues and ensure system stability',
+      'Supported ongoing operations through ticket-based maintenance activities'
+    ],
+    tags: ['PLATFORM MAINTENANCE', 'BUG FIXING', 'OPERATIONAL SUPPORT']
   }
 ];
 
@@ -108,14 +188,15 @@ const FORIX_PROJECTS = [
     image: 'assets/projects/SIGMA.jpg',
     images: ['SIGMA.jpg', 'sigma2.png', 'sigma3.png', 'sigma4.png', 'sigma5.jpg', 'sigma6.jpg', 'sigma7.png'],
     meta: 'PHOTOGRAPHY EQUIPMENT - UNITED STATES',
-    description: 'A high-traffic eCommerce platform built on Magento, requiring continuous maintenance, content management, and performance optimization. I supported daily operations, ensuring platform stability while managing content workflows and marketing updates.',
+    description: 'A high-traffic eCommerce platform for SIGMA, a global brand specializing in lenses and photography equipment. The system supports product catalog management, order processing, inventory handling, and content-driven marketing through an integrated Magento and WordPress setup.',
     highlights: [
-      'Managed day-to-day maintenance tasks, handling bugs, content updates, and operational requests to ensure stable platform performance',
-      'Owned blog operations, including content publishing, structuring, and optimization to support marketing campaigns',
-      'Coordinated with developers to prioritize issues and align fixes with business needs',
-      'Supported tracking and performance monitoring through GA4, GTM, and Core Web Vitals (CWV) improvements'
+      'Maintained daily platform operations, handling bugs, content updates, and operational issues related to orders and stock',
+      'Analyzed requirements and implemented new features such as wishlist, gift card, and necessary Magento extensions',
+      'Coordinated with developers to resolve issues and align solutions with business needs',
+      'Managed blog operations (WordPress), including layout, content structuring, and extension setup',
+      'Supported tracking and performance optimization through GA4, GTM, and Core Web Vitals improvements'
     ],
-    tags: ['MAGENTO', 'ECOMMERCE OPS', 'PLATFORM MAINTENANCE']
+    tags: ['MAGENTO', 'WORDPRESS', 'ECOMMERCE OPS']
   },
   {
     id: 'christmas-designers',
@@ -123,28 +204,79 @@ const FORIX_PROJECTS = [
     image: 'assets/projects/Christmas Designers.jpg',
     images: ['Christmas Designers.jpg', 'christmas designers 3.jpg', 'christmas designers 4.jpg', 'christmas designers 5.jpg', 'christmas designers 6.jpg', 'christmas designers 7.png'],
     meta: 'HOLIDAY DECORATIONS - UNITED STATES',
-    description: 'A seasonal eCommerce brand requiring a full-scale website redesign to improve user experience and conversion performance. I coordinated the end-to-end redesign across all key user journeys.',
+    description: 'A seasonal eCommerce platform specializing in Christmas decorations, requiring continuous maintenance and a full-scale website redesign to improve user experience and conversion performance across key shopping journeys.',
     highlights: [
-      'Led the redesign of core pages including homepage, product pages, category pages, cart, checkout, and blog',
+      'Maintained daily platform operations, handling bugs and tickets related to orders, inventory, and system issues',
+      'Installed and configured necessary extensions to support business and operational needs',
+      'Led the end-to-end redesign of core pages including homepage, category, product, cart, checkout, wishlist, and blog',
       'Translated business and UX requirements into actionable tasks for design and development teams',
-      'Coordinated cross-functional teams to ensure consistency across UI/UX and functionality',
-      'Managed rollout and validation to ensure a smooth transition without disrupting peak-season operations'
+      'Coordinated implementation and ensured consistency across UI/UX and functionality during rollout'
     ],
-    tags: ['ECOMMERCE UX', 'WEBSITE REDESIGN', 'MAGENTO']
+    tags: ['MAGENTO', 'ECOMMERCE UX', 'WEBSITE REDESIGN']
   },
   {
-    id: 'handshake',
-    title: 'Handshake',
-    image: 'assets/projects/Handshake.jpg',
-    images: ['Handshake.jpg', 'handshake2.png', 'handshake3.png', 'handshake4.png', 'handshake5.png', 'handshake6.jpg', 'handshake7.jpg'],
-    meta: 'RECRUITMENT PLATFORM - UNITED STATES',
-    description: 'A recruitment and career network platform supporting student employment and professional connections.',
+    id: 'robbins-brothers',
+    title: 'Robbins Brothers',
+    image: 'assets/projects/Robbins Brothers.jpg',
+    images: ['Robbins Brothers.jpg', 'robbins brothers 2.jpg', 'robbins brothers 3.png', 'robbins brothers 4.png', 'robbins brothers 5.png'],
+    meta: 'LUXURY JEWELRY RETAIL - UNITED STATES',
+    description: 'A luxury jewelry eCommerce platform specializing in diamond rings and fine jewelry, requiring continuous enhancements to support evolving business needs and improve customer experience across the purchase journey.',
     highlights: [
-      'Managed platform feature development and user experience improvements',
-      'Coordinated integration with educational institutions and employers',
-      'Supported community engagement and content management initiatives'
+      'Maintained platform operations, handling bugs and issues related to orders, product display, and system performance',
+      'Implemented new features including wishlist, product reviews, navigation improvements, and product page enhancements',
+      'Analyzed and translated business requirements into development tasks, coordinating with developers for implementation',
+      'Improved website performance through Core Web Vitals (CWV) optimization',
+      'Supported platform upgrades, including Magento version updates when required'
     ],
-    tags: ['RECRUITMENT', 'PLATFORM DEVELOPMENT', 'USER EXPERIENCE']
+    tags: ['MAGENTO', 'FEATURE ENHANCEMENT', 'ECOMMERCE UX']
+  },
+  {
+    id: 'eastern-skate-supply',
+    title: 'Eastern Skate Supply',
+    image: 'assets/projects/Eastern Skate.jpg',
+    images: ['Eastern Skate.jpg', 'eastern skates 2.png', 'eastern skates 3.jpg', 'eastern skates 3.png', 'eastern skates 4.jpg'],
+    meta: 'SPORTS & LIFESTYLE RETAIL - UNITED STATES',
+    description: 'An eCommerce platform specializing in skateboards and sports equipment, requiring continuous maintenance and performance optimization to support stable operations and smooth customer experience.',
+    highlights: [
+      'Maintained platform operations, handling bugs and issues related to orders, content, and system performance',
+      'Coordinated with developers to resolve issues and prioritize technical tasks',
+      'Improved website speed and performance through optimization efforts',
+      'Supported platform upgrades, including Magento version updates when required',
+      'Implemented security and usability improvements such as upgrading reCAPTCHA from v2 to v3'
+    ],
+    tags: ['MAGENTO', 'PLATFORM MAINTENANCE', 'PERFORMANCE OPTIMIZATION']
+  },
+  {
+    id: 'lax-ammo',
+    title: 'LAX Ammo / Freedom Munitions',
+    image: 'assets/projects/LAX Ammo.jpg',
+    images: ['LAX Ammo.jpg', 'lax ammo 2.png', 'lax ammo 3.png', 'lax ammo 4.png'],
+    meta: 'TACTICAL GOODS - UNITED STATES',
+    description: 'A high-demand eCommerce platform requiring stable operations and reliable performance, especially during promotional campaigns and peak traffic periods.',
+    highlights: [
+      'Maintained daily platform operations, handling bugs and issues related to orders, sales, stock, and discount logic',
+      'Set up and managed promotional campaigns, including voucher and discount configurations',
+      'Coordinated with developers to resolve technical issues and ensure system stability',
+      'Supported QA activities to validate features and fixes before release',
+      'Handled various operational tickets to ensure smooth platform performance'
+    ],
+    tags: ['MAGENTO', 'ECOMMERCE OPS', 'PROMOTION SETUP']
+  },
+  {
+    id: 'music-medic',
+    title: 'Music Medic',
+    image: 'assets/projects/MusicMedic.png',
+    images: ['MusicMedic.png', 'music medic 1.png', 'music medic 2.png', 'music medic 3.png'],
+    meta: 'MUSICAL INSTRUMENTS & ACCESSORIES - UNITED STATES',
+    description: 'A specialized eCommerce platform for musical instruments and accessories, requiring regular maintenance and system upgrades to ensure performance, security, and compatibility.',
+    highlights: [
+      'Maintained platform operations, handling occasional bugs and support requests',
+      'Coordinated Magento version upgrades to ensure system stability and up-to-date performance',
+      'Worked with developers to resolve compatibility issues and post-upgrade bugs',
+      'Managed product updates, including bulk image uploads, product information, and link adjustments',
+      'Supported ongoing platform upkeep to maintain smooth operations'
+    ],
+    tags: ['MAGENTO', 'PLATFORM MAINTENANCE', 'VERSION UPGRADE']
   }
 ];
 
@@ -214,16 +346,16 @@ const ABOUT_HIGHLIGHTS = [
   {
     id: 'gauvendi',
     title: 'Gauvendi 2.0',
-    image: 'assets/photo-1.jpg',
+    image: 'assets/projects/Gauvendi.jpg',
     meta: 'BOOKING ENGINE',
-    description: 'A full-featured hospitality booking engine rebuilt from legacy Java to NestJS, managing 50+ hotel properties across Europe.'
+    description: 'A full-featured hospitality booking platform serving 75+ hotel properties across Europe and North America. Rebuilt from legacy Java to modern NestJS architecture.'
   },
   {
-    id: 'dayaway',
-    title: 'DayAway',
-    image: 'assets/photo-1.jpg',
-    meta: 'EXPERIENCE PLATFORM',
-    description: 'An experience reservation platform integrated across IHG\'s global portfolio, enabling hotel guests to book curated day experiences.'
+    id: 'ipbp',
+    title: 'IPBP',
+    image: 'assets/projects/IPBP.jpg',
+    meta: 'FINANCIAL REPORTING',
+    description: 'An enterprise financial and operational reporting platform for AWC, managing 20+ hotels with revenue forecasts, budgeting, and performance analytics.'
   }
 ];
 

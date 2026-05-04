@@ -234,7 +234,7 @@ const FORIX_PROJECTS = [
     id: 'eastern-skate-supply',
     title: 'Eastern Skate Supply',
     image: 'assets/projects/Eastern Skate.jpg',
-    images: ['Eastern Skate.jpg', 'eastern skates 2.png', 'eastern skates 3.jpg', 'eastern skates 3.png', 'eastern skates 4.jpg'],
+    images: ['Eastern Skate.jpg', 'eastern skates 2.png', 'eastern skates 3.jpg', 'eastern skates 4.jpg'],
     meta: 'SPORTS & LIFESTYLE RETAIL - UNITED STATES',
     description: 'An eCommerce platform specializing in skateboards and sports equipment, requiring continuous maintenance and performance optimization to support stable operations and smooth customer experience.',
     highlights: [

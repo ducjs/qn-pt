@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -o magento-logo.svg \"https://www.svgrepo.com/show/303592/magento-2-logo.svg\")",
+      "Bash(curl -o shopify-logo.png \"https://cdn.freebiesupply.com/logos/large/2x/shopify-logo-png-transparent.png\")",
+      "Bash(curl -o wordpress-logo.png \"https://upload.wikimedia.org/wikipedia/commons/9/93/Wordpress_Blue_logo.png\")",
+      "Bash(curl -o javascript-logo.png \"https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png\")"
+    ]
+  }
+}

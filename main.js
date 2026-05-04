@@ -93,7 +93,7 @@ const INIPOD_PROJECTS = [
     id: 'rebean',
     title: 'Rebean',
     image: 'assets/projects/Rebean.png',
-    images: ['Rebean.png', 'rebean 2.png', 'rebean 3.png', 'rebean4.jpg', 'rebean 5.png', 'rebean 6.png', 'rebean 7.png', 'rebean 8.png'],
+    images: ['Rebean.png', 'rebean 2.png', 'rebean 3.png', 'rebean 4.jpg', 'rebean 5.png', 'rebean 6.png', 'rebean 7.png', 'rebean 8.png'],
     meta: 'AI VISIBILITY - INIPOD - VIETNAM',
     description: 'Inipod\'s proprietary SaaS product — an AI-powered visibility tracking and SEO intelligence platform designed for hotels, brands, and hospitality businesses. Rebean analyzes AI search presence, SEO performance, AEO and GEO metrics.',
     highlights: [

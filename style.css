@@ -1,6 +1,8 @@
 /* ─── Reset & Base ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+html { scroll-behavior: smooth; }
+
 :root {
   --blue:      #1da1e4;
   --blue-dark: #0d8cc8;
@@ -808,6 +810,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 80px 48px;
+  background: #f4f4f4;
 }
 
 .about__wrapper {
@@ -829,7 +832,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 60px;
-  background: #f4f4f4;
   padding-left: 10px;
 }
 

@@ -1,5 +1,5 @@
 // ─── Smooth Scroll Config ───
-const ENABLE_SMOOTH_SCROLL = false;
+const ENABLE_SMOOTH_SCROLL = true;
 
 if (ENABLE_SMOOTH_SCROLL) {
   document.documentElement.style.scrollBehavior = 'smooth';

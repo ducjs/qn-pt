@@ -1,3 +1,12 @@
+// ─── Smooth Scroll Config ───
+const ENABLE_SMOOTH_SCROLL = false;
+
+if (ENABLE_SMOOTH_SCROLL) {
+  document.documentElement.style.scrollBehavior = 'smooth';
+} else {
+  document.documentElement.style.scrollBehavior = 'auto';
+}
+
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav__link');
@@ -183,7 +192,13 @@ function initProjectAutoSlide() {
 
       setInterval(() => {
         currentIndex = (currentIndex + 1) % images.length;
-        imgElement.src = images[currentIndex];
+
+        imgElement.style.opacity = '0';
+
+        setTimeout(() => {
+          imgElement.src = images[currentIndex];
+          imgElement.style.opacity = '1';
+        }, 300);
       }, 3000);
     } catch (err) {
       console.error('Error initializing auto-slide:', err);
